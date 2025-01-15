@@ -1,0 +1,23 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.9"
+services:
+  web:
+    build:
+      context: "C:\\Users\\Amanuel\\informatik\\Cars"
+      dockerfile: "Cars/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Cars.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net9.0/Cars.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "cars:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Amanuel\\informatik\\Cars\\Cars:/app:rw"
+    - "C:\\Users\\Amanuel\\informatik\\Cars:/src:rw"
+    - "C:\\Users\\Amanuel\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"

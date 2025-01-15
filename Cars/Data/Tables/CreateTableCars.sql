@@ -1,0 +1,13 @@
+﻿USE [Cars];
+GO
+
+CREATE TABLE [Car] (
+    [ID] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+    [Model] NVARCHAR(100) NOT NULL,
+    [Manufacturer] NVARCHAR(100) NOT NULL,
+    [Year] DATETIME NOT NULL,
+    [Price] FLOAT NOT NULL,
+    [Stock] INT NOT NULL,
+    
+    CONSTRAINT PK_CarID PRIMARY KEY (ID),
+)
